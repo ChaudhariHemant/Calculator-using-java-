@@ -1,0 +1,120 @@
+package com.switchcase;
+
+import java.util.Scanner;
+
+public class SwitchCaseLogic {
+
+	Scanner scan = new Scanner(System.in);
+
+	void addition() {
+		System.out.println("enter digit 1 : ");
+		int a = scan.nextInt();
+		System.out.println("enter digit 2 : ");
+		int b = scan.nextInt();
+
+		int c = a + b;
+
+		System.out.println("addition :" + c);
+
+	}
+
+	void sub() {
+		System.out.println("enter digit 1 : ");
+		int a = scan.nextInt();
+		System.out.println("enter digit 2 : ");
+		int b = scan.nextInt();
+
+		int c = a - b;
+
+		System.out.println("sub :" + c);
+
+	}
+
+	void multiply() {
+		System.out.println("enter digit 1 : ");
+		int a = scan.nextInt();
+		System.out.println("enter digit 2 : ");
+		int b = scan.nextInt();
+
+		int c = a * b;
+
+		System.out.println("multiply :" + c);
+
+	}
+
+	void addChoice() {
+		System.out.println("enter digit you want to sum : ");
+		int a = scan.nextInt(); // 6
+		int sum = 0; // 12 , 35 ,
+		for (int i = 1; i <= a; i++) {
+
+			System.out.println("enter digit : " + i);
+			int num = scan.nextInt();
+			sum = sum + num;
+		}
+		System.out.println("total : " + sum);
+	}
+
+	void checkPrime() {
+		System.out.println("enter digit : ");
+		int num = scan.nextInt();
+
+		boolean isPrime = true;
+
+		for (int i = 2; i < num; i++) {
+
+			if (num % i == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+		if (isPrime) {
+			System.out.println(num + " is prime num");
+		} else {
+			System.out.println(num + " is not prime num");
+
+		}
+
+	}
+
+	void generatePrime() {
+		System.out.println("enter start digit : ");
+		int num1 = scan.nextInt();
+		System.out.println("enter end digit : ");
+		int num2 = scan.nextInt();
+
+		for (int i = num1; i <= num2; i++) {
+			boolean isPrime = true;
+			for (int j = 2; j < i; j++) {
+
+				if (i % j == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+			if (isPrime && i > 1) {
+				System.out.println(i);
+			}
+		}
+
+	}
+	
+	void powerLogic() {
+		System.out.println("enter digit 1 : ");
+		int num1 = scan.nextInt();
+		System.out.println("enter digit 2 : ");
+		int num2 = scan.nextInt();
+		
+		double pow = 1 ;
+		
+		for (int i = 1 ; i <= num2 ; i++) {
+			
+			pow *= num1 ;
+		}
+		
+		System.out.println(pow);
+		
+		
+	}
+
+}
