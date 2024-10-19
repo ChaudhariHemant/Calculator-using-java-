@@ -1,0 +1,55 @@
+package com.switchcase;
+
+import java.util.Scanner;
+
+public class TestLogic {
+
+	public static void main(String[] args) {
+
+		SwitchCaseLogic sc = new SwitchCaseLogic();
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("enter choice num : \n1.addition\n2.sub\n3.multily\n4.check prime\n5.add choice\n6.Generate Prime\n7.power logic");
+		int z = scan.nextInt();
+
+		switch (z) {
+		case 1:
+			sc.addition();
+
+			break;
+		case 2:
+		sc.sub();
+
+			break;
+		case 3:
+			sc.multiply();
+
+			break;
+			
+		case 4:
+			sc.checkPrime();
+
+			break;
+		case 5:
+			sc.addChoice();
+
+			break;
+			
+		case 6:
+			sc.generatePrime();
+
+			break;
+			
+		case 7:
+			sc.powerLogic();
+
+			break;
+
+
+		default:
+			System.out.println("pls enter valid input");
+			break;
+		}
+	}
+}
